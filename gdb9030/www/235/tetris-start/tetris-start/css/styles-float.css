@@ -1,0 +1,22 @@
+/* Do everything in this file */
+h2, h3 {
+    border-bottom: 2px solid red;
+    clear: both;
+}
+
+figure img {
+    width: 100%;
+}
+
+figure {
+    width: 40%;
+    float: right;
+}
+
+div.tet{
+    float: left;
+    width: 20%;
+    border: 2px solid black;
+}
+
+
