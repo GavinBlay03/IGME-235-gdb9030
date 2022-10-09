@@ -1,0 +1,4 @@
+ErrorDocument 404 /gdb9030/235/error/error.html
+
+DirectoryIndex noterror.html
+
