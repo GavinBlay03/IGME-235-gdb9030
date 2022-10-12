@@ -1,19 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@900&display=swap');
 
 
+heading, main {
+    background-color: #dadada;
+}
 
 
+heading img {
+    position: static;
+    margin: 15px;
+}
+
+body {
+    background-color: white;
+    max-width: 8.5in;
+    justify-content: center;
+    align-items: center;
+    margin: 5in;
+    height: 11in;
+}
+
+heading h1 {
+    font-size: 3.1rem;
+    font-family: 'Noto Sans';
+    color: white;
+    padding-left: 30px;
+    margin-top: -30px;
+}
+
+heading footer h1 {
+    margin-top: -55px;
+}
 
 
+heading h2 {
+    font-size: 3.1rem;
+    font-family: 'Noto Sans';
+    color: rgb(255, 136, 0);
+    padding-left: 30px;
+    margin-top: -55px;
+}
 
-footer {
+heading header {
+    position:absolute;
+    top: 70px;
+}
+
+
+heading footer {
     margin-left:3ex;
     bottom: 20px;
+    position: relative;
+}
+
+main footer {
+    position: static;
+}
+
+main {
     position: absolute;
+    margin-left: -5in;
+    bottom: 30px;
+}
+
+article {
+    columns: 3;
+    padding: .5in;
 }
 
 
 /*****************
 Grid Formatting  
 *****************/
+body {
+    display: grid;
+    grid-template-rows: 40% 60%;
+    grid-template-areas: "heading" "main";
+}
+
+heading {
+    display: grid;
+    grid-template-rows: 1fr .5fr 1fr;
+    grid-template-areas: "header", "content", "footer";
+    
+}
+
+main {
+    display: grid;
+    grid-template-rows: 45% 45% 10%;
+    grid-template-columns: 75% 25%;
+    grid-template-areas: "article article article" "aside"
+                         "content content content content"
+                         "footer footer footer footer";
+}
+
+@media screen and (min-width: 720px) {
+    #heading {
+
+    }
+    
+}
 
 
+@media screen and (min-width: 1280px) {
+    #heading {
+        grid-template-rows: 2fr 10fr 2fr;
+        grid-template-areas: "header", "content", "footer";
+
+    }
+}
