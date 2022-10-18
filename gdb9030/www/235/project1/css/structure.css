@@ -1,23 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@900&display=swap');
 
+* {
+    box-sizing: border-box;
+}
 
-heading, main {
+heading,
+main {
     background-color: #dadada;
 }
 
-
-heading img {
+img {
     position: static;
     margin: 15px;
 }
 
+main img {
+    max-width: 130%;
+    max-height: auto;
+}
+
+.first-letter {
+    font-size: 3rem;
+    line-height: 2rem;
+}
+
 body {
     background-color: white;
-    max-width: 8.5in;
     justify-content: center;
     align-items: center;
-    margin: 5in;
-    height: 11in;
+    width: 11.4in;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
 heading h1 {
@@ -42,25 +55,39 @@ heading h2 {
 }
 
 heading header {
-    position:absolute;
+    position: absolute;
     top: 70px;
 }
 
-
 heading footer {
-    margin-left:3ex;
+    margin-left: 3ex;
     bottom: 20px;
     position: relative;
 }
 
+main article,
+aside {
+    margin-top: -1.5in;
+}
+
 main footer {
-    position: static;
+    position: relative;
+    margin-bottom: 1.5in;
+}
+
+main img {
+    margin-top: -1.75in;
 }
 
 main {
+    position: relative;
+    width: auto;
+}
+
+main .pageNum {
     position: absolute;
-    margin-left: -5in;
-    bottom: 30px;
+    margin-left: .5in;
+    margin-top: -.6in;
 }
 
 article {
@@ -68,21 +95,43 @@ article {
     padding: .5in;
 }
 
+article p {
+    margin-top: -.3in;
+}
+
+aside {
+    padding: .25in;
+    width: 2.75in;
+    position: relative;
+}
+
+aside img {
+    margin-bottom: -4in;
+    margin-left: -.5in;
+}
+
+aside p {
+    position: absolute;
+    width: 2in;
+    margin-left: -.25in;
+    margin-top: -.4in;
+}
 
 /*****************
 Grid Formatting  
 *****************/
-body {
+wrapper {
     display: grid;
-    grid-template-rows: 40% 60%;
-    grid-template-areas: "heading" "main";
+    grid-template-rows: 40% auto;
+    grid-template-areas: "heading"
+        "main";
 }
 
 heading {
     display: grid;
-    grid-template-rows: 1fr .5fr 1fr;
+    grid-template-rows: 25% 50% 25%;
     grid-template-areas: "header", "content", "footer";
-    
+
 }
 
 main {
@@ -90,22 +139,6 @@ main {
     grid-template-rows: 45% 45% 10%;
     grid-template-columns: 75% 25%;
     grid-template-areas: "article article article" "aside"
-                         "content content content content"
-                         "footer footer footer footer";
-}
-
-@media screen and (min-width: 720px) {
-    #heading {
-
-    }
-    
-}
-
-
-@media screen and (min-width: 1280px) {
-    #heading {
-        grid-template-rows: 2fr 10fr 2fr;
-        grid-template-areas: "header", "content", "footer";
-
-    }
+        "content content content content"
+        "footer footer footer footer";
 }
