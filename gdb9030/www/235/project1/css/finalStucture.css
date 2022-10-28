@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+
+
+body {
+    background-color: #5a5a5a;
+    margin: 0px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: 'DM Serif Display', serif;
+    color: #fff;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #fff;
+    font-family: 'DM Serif Display', serif;
+}
+
+
+h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    text-align: center;
+    color: #f2f2f2;
+
+}
+
+
+.first-letter {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+header {
+    overflow: hidden;
+    background-color: #111;
+}
+
+nav {
+    overflow: hidden;
+    position: sticky;
+    background-color: #333;
+}
+
+nav a {
+    align-content: center;
+    float: left;
+    color: #f2f2f2;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+#about img {
+    margin-right: 30px;;
+    border-radius: 5px;
+    border-width: 6px;
+    border-style: groove;
+    border-color: lightsteelblue;
+    float: left;
+}
+
+#about p {
+    font-family: 'Merriweather', serif;
+    margin-top: 25px;
+    margin-left: 20%;
+    margin-right: 20%;
+    color: rgb(230, 230, 230);
+    font-size: 18px;
+}
+
+#projects {
+    margin-top: 50px;
+    background-color: #111;
+    color: #fff;
+}
+
+#resume a {
+    text-decoration: none;
+}
+
+
+/*****************
+Grid Formatting  
+*****************/
+
+#wrapper {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas: "header"
+                         "nav"
+                         "main";
+}
